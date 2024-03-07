@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a program that asks the user for a string and checks if it is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward. Display "Palindrome" if it is a palindrome, and "Not Palindrome" otherwise. Example: kayak, level, noon 
+        const str = prompt("Enter a string");
+        const reversedStr = str.split("").reverse().join("");
+        console.log(str === reversedStr ? "Palindrome" : "Not Palindrome");
+        
+
+    </script>
+</body>
+
+</html>

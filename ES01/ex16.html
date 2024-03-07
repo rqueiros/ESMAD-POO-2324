@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Perfect number: ask the user for a number and display on the console whether it is perfect ("YES") or imperfect ("NO"). In maths, a perfect number is a natural number for which the sum of all its proper natural divisors is equal to the number itself. For example, the number 28 is therefore: 28=1+2+4+7+14 
+        let number = +prompt("Enter a number: ");
+        let sum = 0;
+        for (let i = 1; i < number; i++) {
+            if (number % i === 0) {
+                sum += i;
+            }
+        }
+
+        console.log(sum === number ? "YES" : "NO");
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Grading: notify the student on the console of a particular grade (requested from the student) considering the following criteria: 
+        // [10,20] – positive 
+        // [7,10[ - oral 
+        // [0-7[ - negative 
+        // other value - invalid grade 
+
+        const grade = prompt("Enter your grade");
+
+        if (grade >= 10 && grade <= 20) {
+            console.log("positive");
+        } else if (grade >= 7 && grade < 10) {
+            console.log("oral");
+        } else if (grade >= 0 && grade < 7) {
+            console.log("negative");
+        } else {
+            console.log("invalid grade");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

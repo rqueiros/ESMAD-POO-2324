@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Sum of Even Numbers: ask the user to enter a number. Then add up all the even numbers from 1 to the number entered and display the result on the console. 
+        let number = +prompt("Enter a number: ");
+        let sum = 0;
+        for (let i = 1; i <= number; i++) {
+            if (i % 2 === 0) {
+                sum += i;
+            }
+        }
+        console.log(`The sum of even numbers from 1 to ${number} is ${sum}`);
+        
+    </script>
+</body>
+</html>

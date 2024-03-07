@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Ask the user for a number and display the Fibonacci sequence up to that number on the console. The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. 
+        const num = +prompt("Enter a number");
+        let fib = [0, 1];
+        while (fib[fib.length - 1] + fib[fib.length - 2] <= num) {
+            fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+        }
+        console.log(fib);
+
+        
+    </script>
+</body>
+</html>

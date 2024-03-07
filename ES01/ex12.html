@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ask the user for two numbers and an operator (+, -, *, /). Perform the operation and display the result on the console. If the operator is not one of the four, display "Invalid operator". 
+        const num1 = +prompt("Enter a number");
+        const num2 = +prompt("Enter another number");
+        const operator = prompt("Enter an operator (+, -, *, /)");
+
+        let result;
+
+        switch (operator) {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+            case "/":
+                result = num1 / num2;
+                break;
+            default:
+                result = "Invalid operator";
+        }
+
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

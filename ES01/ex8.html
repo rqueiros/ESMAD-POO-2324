@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a program that asks the user for a string and converts it to title case. Title case means that the first letter of each word is capitalized, and the rest of the letters are lowercase. Display the result on the console. 
+        const sentence = prompt("Enter a sentence");
+        const words = sentence.split(" ");
+        let titleCase = "";
+        for (let i = 0; i < words.length; i++) {
+            titleCase += words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase() + " ";
+        }
+        console.log(titleCase);
+        
+
+    </script>
+</body>
+
+</html>

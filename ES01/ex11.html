@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ask the user for numbers until the user enters the number 0.
+        // Display the smallest and the largest number entered on the console.
+
+        let num = prompt("Enter a number");
+        let smallest = num;
+        let largest = num;
+
+        while (num != 0) {
+            if (num < smallest) {
+                smallest = num;
+            }
+            if (num > largest) {
+                largest = num;
+            }
+            num = prompt("Enter a number");
+        }
+
+        console.log(`The smallest number is ${smallest}`);
+        console.log(`The largest number is ${largest}`);
+
+
+
+
+    </script>
+</body>
+
+</html>
