@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX11</title>
+  </head>
+  <body>
+    <script>
+      // Ask the user for weight and height and store them in variables
+      let weight = parseFloat(prompt("Enter your weight in kilograms:"));
+      let height = parseFloat(prompt("Enter your height in meters:"));
+
+      // Calculate BMI
+      let bmi = weight / (height * height);
+
+      // Display BMI
+      console.log("Your BMI is: " + bmi.toFixed(2));
+
+      // Determine weight range based on BMI
+      if (bmi < 18.5) {
+        console.log("Underweight");
+      } else if (bmi >= 18.5 && bmi < 25) {
+        console.log("Normal weight");
+      } else if (bmi >= 25 && bmi < 30) {
+        console.log("Overweight");
+      } else if (bmi >= 30 && bmi < 35) {
+        console.log("Obese");
+      } else {
+        console.log("Extremely obese");
+      }
+    </script>
+  </body>
+</html>

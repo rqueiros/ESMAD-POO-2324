@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX9</title>
+  </head>
+  <body>
+    <script>
+      // Ask the student for their grade and store it in the variable 'grade'
+      let grade = parseInt(prompt("Enter your grade:"));
+      // Check the grade against specific criteria and display the corresponding message on the console
+      if (grade >= 10 && grade <= 20) {
+        console.log("Positive");
+      } else if (grade >= 7 && grade < 10) {
+        console.log("Oral");
+      } else if (grade >= 0 && grade < 7) {
+        console.log("Negative");
+      } else {
+        console.log("Invalid grade");
+      }
+    </script>
+  </body>
+</html>

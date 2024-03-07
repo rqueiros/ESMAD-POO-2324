@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX13</title>
+  </head>
+  <body>
+    <script>
+      // Ask the user for a number
+      let number = parseInt(prompt("Enter a number:"));
+      let sum = 0;
+
+      // Loop through numbers from 1 to the entered number and add even numbers to the sum
+      for (let i = 1; i <= number; i++) {
+        if (i % 2 === 0) {
+          sum += i;
+        }
+      }
+
+      // Display the sum of even numbers on the console
+      console.log("Sum of even numbers from 1 to", number + ":", sum);
+    </script>
+  </body>
+</html>

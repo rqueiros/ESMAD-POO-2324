@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX7</title>
+  </head>
+  <body>
+    <script>
+      // Ask the user for the price of the trainers and store it in the variable 'price'
+      let price = parseFloat(prompt("Enter the price of the trainers:"));
+      // Calculate the discounted price (15% off) and the total price including VAT (23%)
+      let discountedPrice = price * 0.85; // 15% off
+      let totalPrice = discountedPrice * 1.23; // VAT included
+      // Display the total price with VAT on the console
+      console.log("Total price with VAT:", totalPrice.toFixed(2)); // toFixed(2) rounds to 2 decimal places
+    </script>
+  </body>
+</html>

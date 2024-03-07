@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX10</title>
+  </head>
+  <body>
+    <script>
+      // Ask the user to enter a letter and store it in the variable 'letter'
+      let letter = prompt("Enter a letter of the alphabet:").toLowerCase();
+
+      // Check if the entered character is a vowel or a consonant
+      if (
+        letter === "a" ||
+        letter === "e" ||
+        letter === "i" ||
+        letter === "o" ||
+        letter === "u"
+      ) {
+        console.log("VOWEL");
+      } else if (
+        letter >= "a" &&
+        letter <= "z" &&
+        !(
+          letter === "a" ||
+          letter === "e" ||
+          letter === "i" ||
+          letter === "o" ||
+          letter === "u"
+        )
+      ) {
+        console.log("CONSONANT");
+      } else {
+        console.log("Invalid input");
+      }
+    </script>
+  </body>
+</html>
