@@ -12,7 +12,7 @@ It is meant to help students understand and check their solutions.
 - [License](#license)
 
 ## Team
-- Prof. Mário Pinto (mariopinto@esmad.ipp.pt)
+- Prof. Mário Pinto mariopinto@esmad.ipp.pt
 - Prof. Ricardo Queirós (ricardoqueiros@esmad.ipp.pt)
 - Prof. Daniel Carneiro (dgc@esmad.ipp.pt)
 
