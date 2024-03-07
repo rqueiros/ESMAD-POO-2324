@@ -1,5 +1,3 @@
-# ESMAD-POO-2324
-
 # Exercise Sheet Solutions
 
 This repository contains solutions for exercise sheets of the course Object Oriented Programming from the first year of the Web Technologies Degree of Media Arts and Design School of the Polytechnic of Porto. 
