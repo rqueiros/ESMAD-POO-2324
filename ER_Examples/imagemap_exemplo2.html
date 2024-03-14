@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Escape Room nº2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: relative;
+            margin: 50px;
+        }
+
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #f90;
+            width: 400px;
+            height: 200px;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="room">
+        <img src="./room.png" usemap="#roomMap">
+        <map name="roomMap">
+            <area alt="door" id="door" href="#" coords="502,244,411,78" shape="rect" onclick="checkDoor()">
+            <area alt="table" id="table" href="#" coords="211,170,7,255" shape="rect" onclick="renderDialog()">
+        </map>
+        <p>Obtenha a chave na mesa respondendo corretamente à pergunta</p>
+    </div>
+    <img src="./key.png" alt="" id="key" style="display: none; max-width: 250px;">
+    <dialog class="modal">
+        <p id="text"></p>
+        <p id="answers">
+        <form>
+            <input type="radio" value="0" name="answers"> <span id="answer1"></span><br>
+            <input type="radio" value="1" name="answers"> <span id="answer2"></span><br>
+            <input type="radio" value="2" name="answers"> <span id="answer3"></span><br>
+            <input type="radio" value="3" name="answers"> <span id="answer4"></span><br>
+        </form>
+        </p>
+
+    </dialog>
+    <script>
+        const door = document.querySelector("#door");
+        const key = document.querySelector("#key");
+        const table = document.querySelector("#table");
+        
+        const questions = [
+            {
+                text: "Qual a capital de França?",
+                answers: ['Lisboa', 'Madrid', 'Paris', 'Roma'],
+                solution: 2
+            },
+            {
+                text: "Qual o Dia do trabalhador?",
+                answers: ['1 de maio', '25 de abril', '10 de junho', '5 de outubro'],
+                solution: 0
+            },
+            {
+                text: "Quem são os Imagine Dragons?",
+                answers: ['Criadores do YouTube', 'Equipa de basket', 'seita religiosa', 'banda pop-rock'],
+                solution: 3
+            }
+        ];
+
+        let question
+
+
+        // Get all the necessary elements
+        const dialog = document.querySelector("dialog")
+
+
+        function checkDoor() {
+            // Check if the lock is open
+            if (key.style.display === "block") {
+                alert("SAISTE DO ER!!");
+            } else {
+                alert("ENCONTRA PRIMEIRO A CHAVE!!");
+            }
+        }
+
+        function renderDialog() {
+            const index = Math.floor(Math.random() * questions.length);
+            question = questions[index]
+
+            dialog.open = true
+            dialog.querySelector("#text").innerHTML = question.text
+            dialog.querySelector("#answer1").innerHTML = question.answers[0]
+            dialog.querySelector("#answer2").innerHTML = question.answers[1]
+            dialog.querySelector("#answer3").innerHTML = question.answers[2]
+            dialog.querySelector("#answer4").innerHTML = question.answers[3]
+
+            const answers = dialog.querySelectorAll("[name='answers']")
+            for (const answer of answers) {
+                answer.addEventListener('click', checkSuccess)
+            }
+        }
+
+        function checkSuccess(event) {
+            if (event.target.value == question.solution) {
+                key.style.display = "block";
+                door.style.backgroundColor = "green"
+                alert("PARABÉNS, GANHASTE UMA CHAVE");
+            } else {
+                alert("FALHASTE, TENTA NOVAMENTE")
+            }
+            dialog.querySelector("form").reset()
+            dialog.close()
+        }
+
+
+    </script>
+</body>
+
+</html>

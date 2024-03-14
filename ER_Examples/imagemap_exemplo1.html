@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .room {
+            position: relative;
+        }
+
+        .highlightable {
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: yellow;
+            opacity: 0.5;
+        }
+
+        .popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Escape Room</h1>
+    <div class="room">
+        <img src="room.png" usemap="#room-map">
+        <map name="room-map">
+            <area shape="rect" coords="502,244,411,78" href="#" class="highlightable" data-id="1"
+                data-content="This is a door.">
+            <area shape="rect" coords="211,170,7,255" href="#" class="highlightable" data-id="2"
+                data-content="This is a table.">
+        </map>
+    </div>
+    <div id="popup-container"></div>
+    <script>
+        const areas = document.querySelectorAll(".highlightable");
+        const popupContainer = document.getElementById("popup-container");
+
+        areas.forEach((area) => {
+            area.addEventListener("mouseover", () => {
+                const id = area.getAttribute("data-id");
+                const element = document.querySelector(`[data-id="${id}"]`);
+                element.classList.add("highlight");
+            });
+
+            area.addEventListener("mouseout", () => {
+                const id = area.getAttribute("data-id");
+                const element = document.querySelector(`[data-id="${id}"]`);
+                element.classList.remove("highlight");
+            });
+
+            area.addEventListener("click", (event) => {
+                event.preventDefault();
+                const content = area.getAttribute("data-content");
+                const rect = event.target.getBoundingClientRect();
+
+                const popup = document.createElement("div");
+                popup.className = "popup";
+                popup.innerHTML = content;
+                popup.style.top = rect.top + rect.height + "px";
+                popup.style.left = rect.left + rect.width / 2 + "px";
+
+                popupContainer.appendChild(popup);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
