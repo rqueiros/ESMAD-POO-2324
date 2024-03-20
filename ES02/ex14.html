@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a function that checks whether a number passed as a parameter is prime or not. Remember that a prime number N is a natural number greater than 1 that has no divisors other than 1 and itself. Return true if it is prime and false otherwise. The function must be invoked within an IF structure and if it is true it must be presented “The number [N] is prime”. Otherwise, "The number [N] is not prime".
+        function isPrime(number) {
+            if (number === 1) {
+                return false;
+            }
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        if (isPrime(5)) {
+            console.log(`The number 5 is prime`);
+        } else {
+            console.log(`The number 5 is not prime`);
+        }
+
+    </script>
+</body>
+
+</html>

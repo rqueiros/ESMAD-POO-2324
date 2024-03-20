@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a guessing game. Start by generating a random number between 1 and 100. Then ask the user to guess the number. If the user enters a higher number, it should display the following text “DOWN”.
+        // Otherwise, it must indicate: "UP". If the user gets it right, he should
+        // see the message “CONGRATULATIONS, YOU GUESSED IT!”.
+        // In this game, you must have a function that takes two parameters: the
+        // number to guess and the user's attempt. The function must return:
+        // -1 if the attempt is LOWER than the number initially generated
+        // 1 if the attempt is HIGHER than the number initially generated
+        // 0 if the attempt is EQUAL to the number initially generated
+        // Make the game more interesting and give the player just 5 tries. If the
+        // user reaches the limit, he should see: “PATIENCE, PLEASE PLAY AGAIN!”.
+
+        const numberToGuess = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        function guessTheNumber(number, attempt) {
+            attempts++;
+            if (attempts > 5) {
+                return;
+            }
+            if (attempt < number) {
+                return -1;
+            } else if (attempt > number) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+
+        let userAttempt = 0;
+        while (userAttempt !== numberToGuess && attempts <= 5) {
+            userAttempt = parseInt(prompt("Guess the number"));
+            let result = guessTheNumber(numberToGuess, userAttempt);
+            if (result === 1) {
+                console.log("DOWN");
+            } else if (result === -1) {
+                console.log("UP");
+            } else if (result === 0) {
+                console.log("CONGRATULATIONS, YOU GUESSED IT!");
+            }
+        }
+        if (attempts > 5) {
+            console.log("PATIENCE, PLEASE PLAY AGAIN!");
+        }
+
+
+    </script>
+</body>
+
+</html>

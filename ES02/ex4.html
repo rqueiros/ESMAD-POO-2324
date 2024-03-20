@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a function that displays the result of arithmetic operations in an alert box. The function must receive two integer values and an operator (+, -, *, /). All values must be obtained using prompt functions. Safeguard the division by 0 by presenting the user with a message stating that it is not possible to divide
+        function calc(number1, number2, operator) {
+            let result = '';
+            switch (operator) {
+                case '+':
+                    result = number1 + number2;
+                    break;
+                case '-':
+                    result = number1 - number2;
+                    break;
+                case '*':
+                    result = number1 * number2;
+                    break;
+                case '/':
+                    if (number2 === 0) {
+                        result = 'It is not possible to divide by 0';
+                    } else {
+                        result = number1 / number2;
+                    }
+                    break;
+                default:
+                    result = 'Invalid operator';
+                    break;
+            }
+            alert(result);
+        }
+
+        const number1 = +prompt('Enter the first number');
+        const number2 = +prompt('Enter the second number');
+        const operator = prompt('Enter the operator (+, -, *, /)');
+        calc(number1, number2, operator);
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create an abbreviated function expression (arrow function) that
+        // given a number from 100 to 999 check if it is a palindrome number. If
+        // so, it must return true. Otherwise, it must return false. Choose a good
+        // name for the function.
+
+        let isPalindrome = (number) => {
+            let numberString = number.toString();
+            let reversedNumberString = numberString.split("").reverse().join("");
+            return numberString === reversedNumberString;
+        }
+
+        console.log(isPalindrome(121));
+
+    </script>
+</body>
+
+</html>

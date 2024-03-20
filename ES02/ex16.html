@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a function expression called isLeapYear that should return
+        // true if a year passed by the user is a leap or false, otherwise.
+
+        let isLeapYear = function(year) {
+            if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        console.log(isLeapYear(2020));
+
+    </script>
+</body>
+
+</html>

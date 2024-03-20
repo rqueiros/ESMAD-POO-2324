@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a function that calculates the sum of multiples of 3 existing in an interval [a, b], where a and b are passed as parameters.
+        function sumMultiplesOf3(a, b) {
+            let sum = 0;
+            for (let i = a; i <= b; i++) {
+                if (i % 3 === 0) {
+                    sum += i;
+                }
+            }
+            console.log(`The sum of multiples of 3 between ${a} and ${b} is ${sum}`);
+        }
+        
+        sumMultiplesOf3(1, 10);
+
+    </script>
+</body>
+
+</html>

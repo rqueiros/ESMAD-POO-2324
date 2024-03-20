@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a function that presents the multiplication table for a given number passed as a parameter. If no number is passed, the function must print the multiplication table of 1
+
+        function multiplicationTable(number) {
+            if (number === undefined) {
+                number = 1;
+            }
+            for (let i = 1; i <= 10; i++) {
+                console.log(`${number} * ${i} = ${number * i}`);
+            }
+        }
+
+        multiplicationTable(5);
+
+    </script>
+</body>
+
+</html>

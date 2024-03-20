@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a function that displays the classification of a person's BMI (Body Mass Index) in an alert box using the respective weight and height as parameters. Both parameters must be collected using prompt functions. BMI = Weight(kg) / [Height(m)]²
+        function calcBMI(weight, height) {
+            const bmi = weight / (height * height);
+            let classification = '';
+            if (bmi < 18.5) {
+                classification = 'Underweight';
+            } else if (bmi >= 18.5 && bmi < 25) {
+                classification = 'Normal weight';
+            } else if (bmi >= 25 && bmi < 30) {
+                classification = 'Overweight';
+            } else if (bmi >= 30 && bmi < 35) {
+                classification = 'Obesity class 1';
+            } else if (bmi >= 35 && bmi < 40) {
+                classification = 'Obesity class 2';
+            } else {
+                classification = 'Obesity class 3';
+            }
+            alert(`Your BMI is ${bmi.toFixed(2)} and your classification is ${classification}`);
+        }
+
+        const weight = +prompt('Enter your weight in kg');
+        const height = +prompt('Enter your height in m');
+        calcBMI(weight, height);
+
+
+    </script>
+</body>
+
+</html>

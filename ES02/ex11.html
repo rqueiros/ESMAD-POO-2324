@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a function that receives a child's first and last name and a set of strings that represent the name of each of your friends. The function must present the following sentence: “The [firstName] [lastName] has [nFriends] friends!”. Use the Rest parameter to resolve this issue.
+
+        function displayFriends(firstName, lastName, ...friends) {
+            console.log(`The ${firstName} ${lastName} has ${friends.length} friends!`);
+        }
+
+        displayFriends("John", "Doe", "Alice", "Bob", "Charlie");
+
+    </script>
+</body>
+
+</html>
