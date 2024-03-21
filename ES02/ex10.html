@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a function that adds N numbers passed by parameters, Use the arguments object to solve this problem.
+        function sumNumbers() {
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            console.log(`The sum of the numbers is ${sum}`);
+        }
+
+        sumNumbers(1, 2, 3, 4, 5);
+
+    </script>
+</body>
+
+</html>

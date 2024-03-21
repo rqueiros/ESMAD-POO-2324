@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a function expression called isPerfect that checks if a
+        // number is perfect. A perfect number is a natural number for which the
+        // sum of all its own natural divisors (excluding itself) is equal to the
+        // number itself. For example, the number 28 is: 28=1+2+4+7+14. If the
+        // number is perfect return true. Otherwise, it must return false. Use the 
+        // function in a loop that should continue to ask the user for a number
+        // until the number entered is perfect.
+
+        let isPerfect = function(number) {
+            let sum = 0;
+            for (let i = 1; i < number; i++) {
+                if (number % i === 0) {
+                    sum += i;
+                }
+            }
+            if (sum === number) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        let number = 0;
+        while (!isPerfect(number)) {
+            number = parseInt(prompt("Enter a number: "));
+        }
+
+        
+
+
+    </script>
+</body>
+
+</html>

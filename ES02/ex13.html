@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a pow(x, n) function that returns x at the power n. Or, in other words, multiply x by itself n times and return the result.
+        // Test cases:
+        // pow(3, 2) = 3 * 3 = 9
+        // pow(3, 3) = 3 * 3 * 3 = 27
+        // pow(1, 100) = 1 * 1 * ...* 1 = 1
+        // Before calling the function, you must ask the user for x and n. The
+        // function must support only natural values of n: integers above 1.
+
+        function pow(x, n) {
+            if (n < 1) {
+                return 'n must be a natural number';
+            }
+
+            let result = 1;
+            for (let i = 0; i < n; i++) {
+                result *= x;
+            }
+            return result;
+        }
+
+        let x = parseInt(prompt('Enter x:'));
+        let n = parseInt(prompt('Enter n:'));
+        console.log(pow(x, n));
+
+
+
+    </script>
+</body>
+
+</html>
