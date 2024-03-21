@@ -21,7 +21,7 @@ console.log(p3);
 
 // f. Select and print all contents of <p> and <div> elements
 const pElements = document.querySelectorAll("p"); // or document.getElementsByTagName("p");, just to show another way to do it
-const divElements = document.getElementsByTagName("div"); 
+const divElements = document.getElementsByTagName("div");
 for (let i = 0; i < pElements.length; i++) {
     console.log(pElements[i].textContent);
 }
@@ -40,5 +40,5 @@ const divSpan = document.querySelector("div span");
 console.log(divSpan.textContent);
 
 // i. Select and print text from <span> element outside <div> element.
-const spanOutsideDiv = document.querySelector("span");
+const spanOutsideDiv = document.querySelector("body > span");
 console.log(spanOutsideDiv.textContent);
