@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamified To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To-Do List</h1>
+        <p id="total-points">Total Points: 0</p>
+    </header>
+
+    <section id="task-creation">
+        <input type="text" id="task-name" placeholder="Enter task name">
+        <input type="number" id="task-points" placeholder="Assign points">
+        <button id="create-task">Create Task</button>
+    </section>
+
+    <main>
+        <section id="to-do">
+            <h2>To-Do</h2>
+            <ul id="to-do-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </section>
+
+        <section id="doing">
+            <h2>Doing</h2>
+            <ul id="doing-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </section>
+
+        <section id="done">
+            <h2>Done</h2>
+            <ul id="done-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
