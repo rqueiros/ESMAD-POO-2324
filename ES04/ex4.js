@@ -9,7 +9,11 @@ form.addEventListener('submit', (event) => {
     const userType = document.querySelector('select[name="userType"]').value;
     const session = Array.from(document.querySelectorAll('input[name="session"]:checked')).map(checkbox => checkbox.value);
 
-
+    // at least one session must be selected
+    if (session.length === 0) {
+        alert('At least one session must be selected');
+        return;
+    }
 
     // b. Add a new row to the table with the user's data.
 
