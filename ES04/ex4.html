@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- a. -->
+    <form id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="course">Course:</label>
+        <input type="radio" id="tsiw" name="course" value="TSIW" required>
+        <label for="tsiw">TSIW</label>
+        <input type="radio" id="tca" name="course" value="TCAV" required>
+        <label for="tca">TCAV</label>
+        <input type="radio" id="design" name="course" value="Design" required>
+        <label for="design">Design</label>
+        <input type="radio" id="photography" name="course" value="Photography" required>
+        <label for="photography">Photography</label>
+        <br>
+        <label for="userType">User type:</label>
+        <select id="userType" name="userType" required>
+            <option>Student</option>
+            <option>Teacher</option>
+            <option>Employee</option>
+            <option>Other</option>
+        </select>
+        <br>
+        <label for="session">Session:</label>
+        <input type="checkbox" id="morning" name="session" value="Morning">
+        <label for="morning">Morning</label>
+        <input type="checkbox" id="afternoon" name="session" value="Afternoon">
+        <label for="afternoon">Afternoon</label>
+        <br>
+        <button type="submit">Register</button>
+        <button id="count">Count</button>
+    </form>
+
+    <!-- b.  -->
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>User Type</th>
+                <th>Session</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="./ex4.js"></script>
+</body>
+</html>
