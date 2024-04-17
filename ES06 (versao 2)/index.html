@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Buy</title>
+</head>
+<body>
+
+    <header>
+        <h1>WebApp 2Buy</h1>
+    </header>
+    <main>
+        <!-- FORMULÁRIO -->
+        <section>
+            <form>
+                <label for="txtName">NOME</label>
+                <input id="txtName" type="text" required><br>
+                
+                <label for="sltCategory">CATEGORIA</label>
+                <select id="sltCategory" required>
+                    <option value="" selected disabled>SELECIONE UMA CATEGORIA</option>
+                    <option value="fruta">Fruta</option>
+                    <option value="legumes">Legumes</option>
+                    <option value="carne">Carne</option>
+                    <option value="peixe">Peixe</option>
+                    <option value="bebida">Bebida</option>
+                    <option value="outros">Outros</option>
+                </select> <button id="btnNewCategory">NOVA CATEGORIA</button><br>
+
+                <label for="txtQty">QUANTIDADE</label>
+                <input id="txtQty" type="number" min="1" max="1000" value="1" required><br>
+
+                <input type="submit" value="ADICIONAR">
+            </form>
+            <hr>
+        </section>
+
+        <!-- TABELA -->
+        <section>
+            <table>
+                
+            </table>
+            <hr>
+        </section>
+
+        <!-- BOTÕES -->
+        <section>
+            <button id="btnNProducts">Nº PRODUTOS</button>
+            <button id="btnNProductsByCategory">PRODUTOS POR CATEGORIA</button>
+            <button id="btnNQty">QUANTIDADE TOTAL</button>
+            <button id="btnResetProducts">LIMPAR LISTA</button>
+        </section>   
+
+    </main>
+    <footer>
+        <small>by Ricardo Queirós</small>
+    </footer>
+    <script src="index.js"></script>
+    
+</body>
+</html>
