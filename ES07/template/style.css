@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    margin: 1rem;
+}
+
+/* Card */
+.card {
+    position: relative;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card.work {
+    background: #f9c2ff; /* soft pink */
+}
+
+.card.personal {
+    background: #c2f9ff; /* soft blue */
+}
+
+.card.social {
+    background: #f9ffc2; /* soft yellow */
+}
+
+.card.health {
+    background: #c2fff9; /* soft green */
+}
+
+.card.others {
+    background: #ffc2f9; /* soft purple */
+}
+
+.card.expired {
+    filter: grayscale(1);
+}
+
+.card button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 1rem;
+    margin: 1rem;
+    max-width: 500px;
+}
+
+/* style the form and the inputs */
+form {
+    padding: 1rem;
+    max-width: 500px;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background: #333;
+    color: #fff;
+    border: none;
+}
