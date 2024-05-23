@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .game-form, .game-list, .buttons {
+            margin: 20px;
+        }
+        .game-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .game-item img {
+            max-width: 100px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-form">
+        <h2>Add New Game</h2>
+        <form id="addGameForm">
+            <label>
+                Title:
+                <input type="text" id="title" required>
+            </label>
+            <br>
+            <label>
+                Genre:
+                <input type="text" id="genre" required>
+            </label>
+            <br>
+            <label>
+                Release Year:
+                <input type="number" id="year" required>
+            </label>
+            <br>
+            <label>
+                Cover URL:
+                <input type="url" id="cover" required value="https://media.licdn.com/dms/image/C5612AQH752P7i-_asA/article-inline_image-shrink_1000_1488/0/1597699932018?e=1721865600&v=beta&t=k2s6q9KHG9fsPAR-lMiHZk4KZHSpfpCfMJA0RWJf2Zo">
+            </label>
+            
+            <br>
+            <button type="submit">Add Game</button>
+        </form>
+    </div>
+
+    <div class="buttons">
+        <button id="saveButton">Save to LocalStorage</button>
+        <button id="loadButton">Load from LocalStorage</button>
+    </div>
+
+    <div class="game-list">
+        <h2>Game List</h2>
+        <div id="gamesContainer"></div>
+    </div>
+
+    <script type="module" src="./js/views/gameView.js"></script>
+</body>
+</html>
